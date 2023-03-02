@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Ahua Blog</title>
+	<subtitle>Ahua Blog</subtitle>
+	<link href="https://aaronhua123.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://aaronhua123.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-03-02T22:35:35+00:00</updated>
+	<id>https://aaronhua123.github.io/atom.xml</id>
+	<entry xml:lang="en">
+		<title>rustlings .</title>
+		<published>2023-03-02T22:35:35+00:00</published>
+		<updated>2023-03-02T22:35:35+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/blog/rustlings1-copy-2/" type="text/html"/>
+		<id>https://aaronhua123.github.io/blog/rustlings1-copy-2/</id>
+		<content type="html">&lt;h3 id=&quot;gpustat&quot;&gt;gpustat&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;gpustat&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;crates&#x2F;v&#x2F;gpustat.svg&quot; alt=&quot;Crates.io&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;LICENSE&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;github&#x2F;license&#x2F;alongwy&#x2F;gpustat.svg?maxAge=86400&quot; alt=&quot;license&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A rust version of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wookayin&#x2F;gpustat&quot;&gt;gpustat&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Just &lt;em&gt;less&lt;&#x2F;em&gt; than nvidia-smi?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;code&gt;$ gpustat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Options:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--color&lt;&#x2F;code&gt;            : Force colored output (even when stdout is not a tty)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--no-color&lt;&#x2F;code&gt;         : Suppress colored output&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;&#x2F;code&gt;, &lt;code&gt;--show-user&lt;&#x2F;code&gt;  : Display username of the process owner&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-c&lt;&#x2F;code&gt;, &lt;code&gt;--show-cmd&lt;&#x2F;code&gt;   : Display the process name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-f&lt;&#x2F;code&gt;, &lt;code&gt;--show-full-cmd&lt;&#x2F;code&gt;   : Display full command and cpu stats of running process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;&#x2F;code&gt;, &lt;code&gt;--show-pid&lt;&#x2F;code&gt;   : Display PID of the process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-F&lt;&#x2F;code&gt;, &lt;code&gt;--show-fan&lt;&#x2F;code&gt;   : Display GPU fan speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;&#x2F;code&gt;, &lt;code&gt;--show-codec&lt;&#x2F;code&gt; : Display encoder and&#x2F;or decoder utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;&#x2F;code&gt;, &lt;code&gt;--show-all&lt;&#x2F;code&gt;   : Display all gpu properties above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
+&lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cargo install gpustat
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[0]&lt;&#x2F;code&gt;: GPUindex (starts from 0) as PCI_BUS_ID&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;A100-PCIE-40GB&lt;&#x2F;code&gt;: GPU name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;65&#x27;C&lt;&#x2F;code&gt;: Temperature&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;75 %&lt;&#x2F;code&gt;: Utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;33409 &#x2F; 40536 MB&lt;&#x2F;code&gt;: GPU Memory Usage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;along(33407M)&lt;&#x2F;code&gt;: Username of the running processes owner on GPU (and their memory usage)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;license&quot;&gt;License&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;LICENSE&quot;&gt;GPL v2 License&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>rustlings .</title>
+		<published>2023-03-02T22:35:35+00:00</published>
+		<updated>2023-03-02T22:35:35+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/blog/rustlings1-copy/" type="text/html"/>
+		<id>https://aaronhua123.github.io/blog/rustlings1-copy/</id>
+		<content type="html">&lt;h3 id=&quot;gpustat&quot;&gt;gpustat&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;gpustat&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;crates&#x2F;v&#x2F;gpustat.svg&quot; alt=&quot;Crates.io&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;LICENSE&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;github&#x2F;license&#x2F;alongwy&#x2F;gpustat.svg?maxAge=86400&quot; alt=&quot;license&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A rust version of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wookayin&#x2F;gpustat&quot;&gt;gpustat&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Just &lt;em&gt;less&lt;&#x2F;em&gt; than nvidia-smi?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;code&gt;$ gpustat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Options:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--color&lt;&#x2F;code&gt;            : Force colored output (even when stdout is not a tty)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--no-color&lt;&#x2F;code&gt;         : Suppress colored output&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;&#x2F;code&gt;, &lt;code&gt;--show-user&lt;&#x2F;code&gt;  : Display username of the process owner&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-c&lt;&#x2F;code&gt;, &lt;code&gt;--show-cmd&lt;&#x2F;code&gt;   : Display the process name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-f&lt;&#x2F;code&gt;, &lt;code&gt;--show-full-cmd&lt;&#x2F;code&gt;   : Display full command and cpu stats of running process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;&#x2F;code&gt;, &lt;code&gt;--show-pid&lt;&#x2F;code&gt;   : Display PID of the process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-F&lt;&#x2F;code&gt;, &lt;code&gt;--show-fan&lt;&#x2F;code&gt;   : Display GPU fan speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;&#x2F;code&gt;, &lt;code&gt;--show-codec&lt;&#x2F;code&gt; : Display encoder and&#x2F;or decoder utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;&#x2F;code&gt;, &lt;code&gt;--show-all&lt;&#x2F;code&gt;   : Display all gpu properties above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
+&lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cargo install gpustat
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[0]&lt;&#x2F;code&gt;: GPUindex (starts from 0) as PCI_BUS_ID&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;A100-PCIE-40GB&lt;&#x2F;code&gt;: GPU name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;65&#x27;C&lt;&#x2F;code&gt;: Temperature&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;75 %&lt;&#x2F;code&gt;: Utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;33409 &#x2F; 40536 MB&lt;&#x2F;code&gt;: GPU Memory Usage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;along(33407M)&lt;&#x2F;code&gt;: Username of the running processes owner on GPU (and their memory usage)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;license&quot;&gt;License&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;LICENSE&quot;&gt;GPL v2 License&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>rustlings .</title>
+		<published>2023-03-02T22:35:35+00:00</published>
+		<updated>2023-03-02T22:35:35+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/blog/rustlings1/" type="text/html"/>
+		<id>https://aaronhua123.github.io/blog/rustlings1/</id>
+		<content type="html">&lt;h3 id=&quot;gpustat&quot;&gt;gpustat&lt;&#x2F;h3&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;gpustat&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;crates&#x2F;v&#x2F;gpustat.svg&quot; alt=&quot;Crates.io&quot; &#x2F;&gt;&lt;&#x2F;a&gt;
+&lt;a href=&quot;LICENSE&quot;&gt;&lt;img src=&quot;https:&#x2F;&#x2F;img.shields.io&#x2F;github&#x2F;license&#x2F;alongwy&#x2F;gpustat.svg?maxAge=86400&quot; alt=&quot;license&quot; &#x2F;&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;A rust version of &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;wookayin&#x2F;gpustat&quot;&gt;gpustat&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Just &lt;em&gt;less&lt;&#x2F;em&gt; than nvidia-smi?&lt;&#x2F;p&gt;
+&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;code&gt;$ gpustat&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Options:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--color&lt;&#x2F;code&gt;            : Force colored output (even when stdout is not a tty)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;--no-color&lt;&#x2F;code&gt;         : Suppress colored output&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-u&lt;&#x2F;code&gt;, &lt;code&gt;--show-user&lt;&#x2F;code&gt;  : Display username of the process owner&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-c&lt;&#x2F;code&gt;, &lt;code&gt;--show-cmd&lt;&#x2F;code&gt;   : Display the process name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-f&lt;&#x2F;code&gt;, &lt;code&gt;--show-full-cmd&lt;&#x2F;code&gt;   : Display full command and cpu stats of running process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;&#x2F;code&gt;, &lt;code&gt;--show-pid&lt;&#x2F;code&gt;   : Display PID of the process&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-F&lt;&#x2F;code&gt;, &lt;code&gt;--show-fan&lt;&#x2F;code&gt;   : Display GPU fan speed&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;&#x2F;code&gt;, &lt;code&gt;--show-codec&lt;&#x2F;code&gt; : Display encoder and&#x2F;or decoder utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;&#x2F;code&gt;, &lt;code&gt;--show-all&lt;&#x2F;code&gt;   : Display all gpu properties above&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;quick-installation&quot;&gt;Quick Installation&lt;&#x2F;h4&gt;
+&lt;p&gt;Install from Cargo:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cargo install gpustat
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h4 id=&quot;default-display&quot;&gt;Default display&lt;&#x2F;h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[0] | A100-PCIE-40GB | 65&#x27;C | 75 % | 33409 &#x2F; 40536 MB | along(33407M)&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[0]&lt;&#x2F;code&gt;: GPUindex (starts from 0) as PCI_BUS_ID&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;A100-PCIE-40GB&lt;&#x2F;code&gt;: GPU name&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;65&#x27;C&lt;&#x2F;code&gt;: Temperature&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;75 %&lt;&#x2F;code&gt;: Utilization&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;33409 &#x2F; 40536 MB&lt;&#x2F;code&gt;: GPU Memory Usage&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;code&gt;along(33407M)&lt;&#x2F;code&gt;: Username of the running processes owner on GPU (and their memory usage)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;license&quot;&gt;License&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;a href=&quot;LICENSE&quot;&gt;GPL v2 License&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Resume: a zola theme</title>
+		<published>2021-09-03T13:30:54.712+00:00</published>
+		<updated>2021-09-03T13:30:54.712+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/projects/resume-a-zola-theme/" type="text/html"/>
+		<id>https://aaronhua123.github.io/projects/resume-a-zola-theme/</id>
+		<content type="html">&lt;h1 id=&quot;zola-resume&quot;&gt;Zola Resume&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;kuai-su-kai-shi&quot;&gt;快速开始&lt;&#x2F;h2&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone git@github.com:alongwy&#x2F;zola-resume.git
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; zola-resume
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; serve
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# open http:&#x2F;&#x2F;127.0.0.1:1111&#x2F;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;&lt;strong&gt;此方法之后更新主题可能比较麻烦&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;an-zhuang&quot;&gt;安装&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;di-yi-bu-chu-shi-hua-wang-zhan&quot;&gt;第一步: 初始化网站&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;zola&lt;&#x2F;span&gt;&lt;span&gt; init mysite
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-2-an-zhuang-zola-resume&quot;&gt;Step 2: 安装 zola-resume&lt;&#x2F;h3&gt;
+&lt;p&gt;安装该主题到&lt;code&gt;themes&lt;&#x2F;code&gt;目录:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; mysite&#x2F;themes
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; clone git@github.com:alongwy&#x2F;zola-resume.git
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;或者使用 submodule 安装:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#0184bc;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span&gt; mysite
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; init  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# if your project is a git repository already, ignore this command
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; submodule add git@github.com:alongwy&#x2F;zola-resume.git themes&#x2F;zola-resume
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-3-pei-zhi-wang-zhan&quot;&gt;Step 3: 配置网站&lt;&#x2F;h3&gt;
+&lt;p&gt;在配置文件中 &lt;code&gt;config.toml&lt;&#x2F;code&gt; 开启本主题:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;theme &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;zola-resume&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;或者直接复制 &lt;code&gt;config.toml.example&lt;&#x2F;code&gt; 到本目录:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;zola-resume&#x2F;config.toml.example config.toml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;step-4-tian-jia-xiu-gai-nei-rong&quot;&gt;Step 4: 添加&#x2F;修改内容&lt;&#x2F;h3&gt;
+&lt;p&gt;然后复制:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;cp -r themes&#x2F;zola-resume&#x2F;data .
+&lt;&#x2F;span&gt;&lt;span&gt;cp -r themes&#x2F;zola-resume&#x2F;content .
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;你可以修改或者添加新内容到 &lt;code&gt;content&#x2F;blog&lt;&#x2F;code&gt;, &lt;code&gt;content&#x2F;projects&lt;&#x2F;code&gt; 等目录，注意其中的 &lt;code&gt;_index.md&lt;&#x2F;code&gt; 不要删除。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-5-yun-xing-xiang-mu&quot;&gt;Step 5: 运行项目&lt;&#x2F;h3&gt;
+&lt;p&gt;使用如下命令查看效果:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;color:#383a42;&quot;&gt;&lt;code&gt;&lt;span&gt;zola serve
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;打开 http:&#x2F;&#x2F;127.0.0.1:1111 查看效果。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;step-6-zi-dong-gou-jian&quot;&gt;Step 6: 自动构建&lt;&#x2F;h3&gt;
+&lt;p&gt;复制 github actions 配置文件：&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;mkdir -p&lt;&#x2F;span&gt;&lt;span&gt; .github&#x2F;workflows
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;zola-resume&#x2F;build.yml .github&#x2F;workflows&#x2F;build.yml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-cms-xi-tong&quot;&gt;配置 CMS 系统&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;step-1-xiu-gai-pei-zhi-wen-jian&quot;&gt;Step 1: 修改配置文件&lt;&#x2F;h3&gt;
+&lt;p&gt;复制 cms 配置文件:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span&gt; themes&#x2F;zola-resume&#x2F;static&#x2F;admin&#x2F;config.yml static&#x2F;admin&#x2F;config.yml
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;并修改如下部分:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;yaml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-yaml &quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# static&#x2F;admin&#x2F;config.yml
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;backend&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;name&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;github
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;repo&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;USERNAME&#x2F;REPO             &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# &amp;lt;-- 记得修改
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;branch&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;BRANCH                  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# &amp;lt;-- 记得修改
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cms_label_prefix&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;netlify-cms&#x2F;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;site_domain&lt;&#x2F;span&gt;&lt;span&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;DOMAIN.netlify.com &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# 记下来这个位置，之后会用到
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;pei-zhi-hou-tai-ren-zheng&quot;&gt;配置后台认证&lt;&#x2F;h2&gt;
+&lt;p&gt;首先到 &lt;a href=&quot;https:&#x2F;&#x2F;netlify.com&quot;&gt;Netlify&lt;&#x2F;a&gt; 注册账号并配置仓库，这个时候会自动构建失败，不用管它。&lt;&#x2F;p&gt;
+&lt;p&gt;进入网站 setting 的 &lt;code&gt;Build &amp;amp; deploy&lt;&#x2F;code&gt; 选项把 &lt;code&gt;Build settings&lt;&#x2F;code&gt; 的 &lt;code&gt;active&lt;&#x2F;code&gt; 关掉，这样就不会消耗 netlify 的自动构建时长。&lt;&#x2F;p&gt;
+&lt;p&gt;进入 setting 的 &lt;code&gt;Access control&lt;&#x2F;code&gt; 找到其中的 &lt;code&gt;OAuth&lt;&#x2F;code&gt;，&lt;code&gt;Install provider&lt;&#x2F;code&gt; 把 Github 装上。其中的 github app 可以查看这个&lt;a href=&quot;https:&#x2F;&#x2F;docs.netlify.com&#x2F;visitor-access&#x2F;oauth-provider-tokens&#x2F;&quot;&gt;文档&lt;&#x2F;a&gt;进行配置。&lt;&#x2F;p&gt;
+&lt;p&gt;最后在 setting 的 &lt;code&gt;Custom domains&lt;&#x2F;code&gt; 里面添加 &lt;code&gt;YOURNAME.github.io&lt;&#x2F;code&gt;，会有警告，但是不用管他，前面有一个 &lt;code&gt;Default subdomain&lt;&#x2F;code&gt;，把他记下来填到 &lt;code&gt;static&#x2F;admin&#x2F;config.yml&lt;&#x2F;code&gt; 里面的 &lt;code&gt;backend.site_domain&lt;&#x2F;code&gt; 里面去。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;about-zhu-ye&quot;&gt;About 主页&lt;&#x2F;h3&gt;
+&lt;p&gt;修改 &lt;code&gt;contents&#x2F;_index.md&lt;&#x2F;code&gt; 来改变主页内容&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;qi-ta-wen-jian&quot;&gt;其他文件&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;certifications.json&quot;&gt;data&#x2F;certifications.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;social.json&quot;&gt;data&#x2F;social.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;skills.json&quot;&gt;data&#x2F;skills.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;experience.json&quot;&gt;data&#x2F;experience.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;AlongWY&#x2F;zola-resume&#x2F;blob&#x2F;main&#x2F;data&#x2F;education.json&quot;&gt;data&#x2F;education.json&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>Huggingface&#x2F;datasets</title>
+		<published>2021-08-28T14:13:14.674+00:00</published>
+		<updated>2021-08-28T14:13:14.674+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/opensource/huggingface-datasets/" type="text/html"/>
+		<id>https://aaronhua123.github.io/opensource/huggingface-datasets/</id>
+		<content type="html">&lt;p&gt;🤗 Datasets is a lightweight library providing two main features:&lt;&#x2F;p&gt;
+&lt;p&gt;one-line dataloaders for many public datasets: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;one liners to download and pre-process any of the number of datasets major public datasets (in 467 languages and dialects!) provided on the HuggingFace Datasets Hub. With a simple command like &lt;code&gt;squad_dataset = load_dataset(&amp;quot;squad&amp;quot;)&lt;&#x2F;code&gt;, get any of these datasets ready to use in a dataloader for training&#x2F;evaluating a ML model (Numpy&#x2F;Pandas&#x2F;PyTorch&#x2F;TensorFlow&#x2F;JAX),&lt;&#x2F;li&gt;
+&lt;li&gt;efficient data pre-processing: simple, fast and reproducible data pre-processing for the above public datasets as well as your own local datasets in CSV&#x2F;JSON&#x2F;text. With simple commands like &lt;code&gt;tokenized_dataset = dataset.map(tokenize_example)&lt;&#x2F;code&gt;, efficiently prepare the dataset for inspection and ML model evaluation and training.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>NotFeed: A RSS Reader on GitHub</title>
+		<published>2021-08-28T11:40:32.885+00:00</published>
+		<updated>2021-08-28T11:40:32.885+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/projects/notfeed-a-rss-reader-on-github/" type="text/html"/>
+		<id>https://aaronhua123.github.io/projects/notfeed-a-rss-reader-on-github/</id>
+		<content type="html">&lt;h3 id=&quot;notcraft-notfeed&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;notcraft.alongwy.top&#x2F;NotFeed&#x2F;&quot;&gt;NotCraft::NotFeed&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;An RSS reader running entirely from your GitHub repo.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free hosting on &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&#x2F;&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;. No ads. No third party tracking.&lt;&#x2F;li&gt;
+&lt;li&gt;No need for backend. Content updates via &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;features&#x2F;actions&quot;&gt;GitHub Actions&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Customizable layouts and styles via templating and theming API. Just bring your HTML and CSS.&lt;&#x2F;li&gt;
+&lt;li&gt;Free and open source. No third-party tracking.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;github-pages&quot;&gt;Github Pages&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NotCraft&#x2F;NotFeed-Template&quot;&gt;NotFeed-Template&lt;&#x2F;a&gt; generate your own repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;In the repository root, open &lt;code&gt;Config.toml&lt;&#x2F;code&gt; file, click the &amp;quot;Pencil (Edit this file)&amp;quot; button to edit.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;#&lt;&#x2F;code&gt; to uncommend the &lt;code&gt;cacheUrl&lt;&#x2F;code&gt; property, replace &lt;code&gt;&amp;lt;github_username&amp;gt;&lt;&#x2F;code&gt; with your GitHub username, and
+replace &lt;code&gt;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt; with your GitHub repo name.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;In the sources, update the items to the sources you want to follow. The final content of the file should look similar
+to this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# Config.toml
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;site_title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;ArxivDaily&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cache_max_days &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;7
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sources &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;export.arxiv.org&#x2F;rss&#x2F;cs.CL&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# proxy = &amp;quot;http:&#x2F;&#x2F;127.0.0.1:7890&amp;quot; ## Optional: default is None
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# statics_dir   = &amp;quot;statics&amp;quot;       ## Optional: default is &amp;quot;statics&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# templates_dir = &amp;quot;includes&amp;quot;      ## Optional: default is &amp;quot;includes&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# cache_url = &amp;quot;https:&#x2F;&#x2F;GITHUB_USERNAME.github.io&#x2F;REPO_NAME&#x2F;cache.json&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# minify = true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# [scripts]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# highlight = &amp;quot;scripts&#x2F;highlight.rhai&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Scroll to the bottom of the page, click &amp;quot;Commit changes&amp;quot; button.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the rebuild finishes, your feed will be available at &lt;code&gt;https:&#x2F;&#x2F;&amp;lt;github_username&amp;gt;.github.io&#x2F;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;localhost&quot;&gt;Localhost&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NotCraft&#x2F;NotFeed-Template&quot;&gt;NotFeed-Template&lt;&#x2F;a&gt; repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit &lt;code&gt;Config.toml&lt;&#x2F;code&gt; file.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;notfeed&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;build: &lt;code&gt;notfeed build&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;serve: &lt;code&gt;notfeed serve --addr 127.0.0.1 --port 8080&lt;&#x2F;code&gt; or simply &lt;code&gt;notfeed serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;thanks&quot;&gt;Thanks&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Inspired by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;osmoscraft&#x2F;osmosfeed&quot;&gt;osmos::feed&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models</title>
+		<published>2021-08-28T11:00:37.434+00:00</published>
+		<updated>2021-08-28T11:00:37.434+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/" type="text/html"/>
+		<id>https://aaronhua123.github.io/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/</id>
+		<content type="html">&lt;p&gt;An open-source neural language technology platform supporting six fundamental Chinese NLP tasks: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)&lt;&#x2F;li&gt;
+&lt;li&gt;syntactic parsing (dependency parsing)&lt;&#x2F;li&gt;
+&lt;li&gt;semantic parsing (semantic dependency parsing and semantic role labeling). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Unlike the existing state-of-the-art toolkits, such as Stanza, that adopt an independent model for each task, N-LTP adopts the multi-task framework by using a shared pre-trained model, which has the advantage of capturing the shared knowledge across relevant Chinese tasks. &lt;&#x2F;p&gt;
+&lt;p&gt;In addition, knowledge distillation where the single-task model teaches the multi-task model is further introduced to encourage the multi-task model to surpass its single-task teacher.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we provide a collection of easy-to-use APIs and a visualization tool to make users easier to use and view the processing results directly. To the best of our knowledge, this is the first toolkit to support six Chinese NLP fundamental tasks. &lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>HIT-SCIR at MRP 2020: Transition-based Parser and Iterative Inference Parser</title>
+		<published>2020-09-01T11:00:06.142+00:00</published>
+		<updated>2020-09-01T11:00:06.142+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/" type="text/html"/>
+		<id>https://aaronhua123.github.io/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/</id>
+		<content type="html">&lt;p&gt;This paper describes our submission system (HIT-SCIR) for the CoNLL 2020 shared task: Cross-Framework and Cross-Lingual Meaning Representation Parsing. &lt;&#x2F;p&gt;
+&lt;p&gt;The task includes five frameworks for graph-based meaning representations, i.e., UCCA, EDS, PTG, AMR, and DRG. &lt;&#x2F;p&gt;
+&lt;p&gt;Our solution consists of two sub-systems: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;transition-based parser for Flavor (1) frameworks (UCCA, EDS, PTG)&lt;&#x2F;li&gt;
+&lt;li&gt;iterative inference parser for Flavor (2) frameworks (DRG, AMR). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In the final evaluation, our system is ranked 3rd among the seven team both in Cross-Framework Track and Cross-Lingual Track, with the macro-averaged MRP F1 score of 0.81&#x2F;0.69.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>

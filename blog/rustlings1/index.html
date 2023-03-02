@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>Ahua Blog</title>
+  
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/saira-extra-condensed@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sans@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://aaronhua123.github.io/main.css">
+
+  
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+
+<script src="https://aaronhua123.github.io/elasticlunr.min.js" defer></script>
+
+<script src="https://aaronhua123.github.io/search_index.en.js" defer></script>
+
+
+
+
+  
+  
+<!-- RSS -->
+
+<link rel="alternate" type="application/atom+xml" title="RSS" href="https://aaronhua123.github.io/atom.xml">
+
+
+  
+
+  
+  
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    
+
+<div style="display:block;margin:auto auto 0;padding:.5rem">
+    <figure class="image">
+        <img id="avatar" class="is-rounded" src="https://aaronhua123.github.io/media/avatar.png">
+    </figure>
+</div>
+
+
+    
+<ul id="menu" class="menu-list">
+    
+
+<li data-menuanchor="about"><a href="https://aaronhua123.github.io/#anchor_about">ABOUT</a></li>   
+
+ 
+<li data-menuanchor="skills"><a href="https://aaronhua123.github.io/#anchor_skills">SKILLS</a></li>
+
+
+<li data-menuanchor="projects"><a href="https://aaronhua123.github.io/#anchor_projects">PROJECTS</a></li>
+
+
+
+
+
+ 
+<li data-menuanchor="blog"><a href="https://aaronhua123.github.io/#anchor_blog">BLOG</a></li>    
+
+</ul>
+
+  </aside>
+  
+<div class="modal" id="copyTarget">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+      <textarea class="textarea" id="bibtex-content" placeholder="e.g. Hello world"  readonly></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="copyButton">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
+  <div id="content">
+    <!-- Content -->
+    
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <h2>rustlings .<a href="https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;gpustat" style="font-style: initial;" ><span class="tag is-warning">Link</span></a></h2>
+    
+    <div class="content pb-5">
+      <h3 id="gpustat">gpustat</h3>
+<p><a href="https://crates.io/crates/gpustat"><img src="https://img.shields.io/crates/v/gpustat.svg" alt="Crates.io" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/alongwy/gpustat.svg?maxAge=86400" alt="license" /></a></p>
+<p>A rust version of <a href="https://github.com/wookayin/gpustat">gpustat</a>.</p>
+<p>Just <em>less</em> than nvidia-smi?</p>
+<h4 id="usage">Usage</h4>
+<p><code>$ gpustat</code></p>
+<p>Options:</p>
+<ul>
+<li><code>--color</code>            : Force colored output (even when stdout is not a tty)</li>
+<li><code>--no-color</code>         : Suppress colored output</li>
+<li><code>-u</code>, <code>--show-user</code>  : Display username of the process owner</li>
+<li><code>-c</code>, <code>--show-cmd</code>   : Display the process name</li>
+<li><code>-f</code>, <code>--show-full-cmd</code>   : Display full command and cpu stats of running process</li>
+<li><code>-p</code>, <code>--show-pid</code>   : Display PID of the process</li>
+<li><code>-F</code>, <code>--show-fan</code>   : Display GPU fan speed</li>
+<li><code>-e</code>, <code>--show-codec</code> : Display encoder and/or decoder utilization</li>
+<li><code>-a</code>, <code>--show-all</code>   : Display all gpu properties above</li>
+</ul>
+<h4 id="quick-installation">Quick Installation</h4>
+<p>Install from Cargo:</p>
+<pre style="background-color:#fafafa;color:#383a42;"><code><span>cargo install gpustat
+</span></code></pre>
+<h4 id="default-display">Default display</h4>
+<blockquote>
+<p>[0] | A100-PCIE-40GB | 65'C | 75 % | 33409 / 40536 MB | along(33407M)</p>
+</blockquote>
+<ul>
+<li><code>[0]</code>: GPUindex (starts from 0) as PCI_BUS_ID</li>
+<li><code>A100-PCIE-40GB</code>: GPU name</li>
+<li><code>65'C</code>: Temperature</li>
+<li><code>75 %</code>: Utilization</li>
+<li><code>33409 / 40536 MB</code>: GPU Memory Usage</li>
+<li><code>along(33407M)</code>: Username of the running processes owner on GPU (and their memory usage)</li>
+</ul>
+<h4 id="license">License</h4>
+<p><a href="LICENSE">GPL v2 License</a></p>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+<script>
+  function show_bib(bib_path) {
+    $.ajax({
+      url: bib_path,
+      success: function (data) {
+        $("#bibtex-content").text(data);
+        $("#copyTarget").addClass("is-active");
+      },
+    });
+  }
+
+  document
+    .getElementById("copyButton")
+    .addEventListener("click", function () {
+      var copyText = document.getElementById("bibtex-content");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      $("#copyTarget").removeClass("is-active");
+    });
+</script>
+
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript">
+    var fullpages = new fullpage('#fullpage', {
+        menu: '#menu',
+        setRecordHistory: false,
+        anchors: [
+             'anchor_about',         
+             'anchor_skills',        
+             'anchor_projects',      
+            
+            
+            
+            
+             'anchor_blog',          
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+
+            }
+            
+	    }
+    });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
+</script>
+
+</body>
+
+</html>
