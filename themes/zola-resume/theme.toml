@@ -1,0 +1,40 @@
+name = "resume"
+description = "A resume theme"
+license = "MIT"
+homepage = "https://github.com/alongwy/zola-resume"
+min_version = "0.11.0"
+demo = "https://resume.alongwy.top"
+
+compile_sass = true
+generate_feed = true
+
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[extra]
+first_name = "Feng"
+last_name = "Yunlong"
+address = "Harbin, China"
+email = "ylfeng@ir.hit.edu.cn"
+favicon = "/favicon.ico"
+avatar = "/media/avatar.png"
+
+katex = false
+show_about = true
+show_skills = true
+show_projects = true
+show_opensource = true
+show_publications = true
+show_experience = true
+show_education = true
+show_blog = true
+
+[author]
+name = "Feng Yunlong"
+homepage = "https://www.alongwy.top"
+
+[original]
+author =  "Vincent Prouillet"
+homepage = "https://www.vincentprouillet.com"
+repo = "https://github.com/getzola/hyde"

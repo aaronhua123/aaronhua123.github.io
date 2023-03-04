@@ -1,0 +1,67 @@
+[
+  {
+    "grouping": "Languages, Operating Systems & Tools",
+    "skills": [
+      "Python",
+      "Rust",
+      "javascript",
+      "git",
+      "linux"
+    ]
+  },
+  {
+    "grouping": "Data Management",
+    "skills": [
+      {
+        "name": "MySQL",
+        "icon": "MySQL"
+      },
+      {
+        "name": "Sqlite",
+        "icon": "bash"
+      },
+      {
+        "name": "Redis",
+        "icon": "bash"
+      },
+      {
+        "name": "Mongodb",
+        "icon": "bash"
+      }
+    ]
+  },
+  {
+    "grouping": "Architecture",
+    "skills": [
+      {
+        "name": "Backend & RESTful APIs",
+        "icon": "bash"
+      },
+      {
+        "name": "Spider",
+        "icon": "bash"
+      },
+      {
+        "name": "DataAnalyze",
+        "icon": "bash"
+      }
+    ]
+  },
+  {
+    "grouping": "Development Tool",
+    "skills": [
+      {
+        "name": "DjangoRestfulFrameWork",
+        "icon": "bash"
+      },
+      {
+        "name": "Requests & Scrapy & lxml",
+        "icon": "bash"
+      },
+      {
+        "name": "pandas & polars",
+        "icon": "bash"
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+base_url = "https://aaronhua123.github.io"
+title = "Ahua Blog"
+description = "Ahua Blog"
+theme = "zola-resume"
+compile_sass = true
+generate_feed = true
+build_search_index = true
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "OneHalfLight"
+
+[extra]
+first_name = "a"
+last_name = "hua"
+address = "address"
+email = "ZH"
+favicon = "/favicon.ico"
+avatar = "/media/avatar.png"
+
+
+show_about = true
+show_skills = true
+show_projects = true
+show_opensource = false
+show_publications = false
+show_experience = false
+show_education = false
+show_blog = true
