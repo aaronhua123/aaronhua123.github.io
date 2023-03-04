@@ -84,7 +84,7 @@ cp -r themes/zola-resume/data .
 cp -r themes/zola-resume/content .
 ```
 
-You can modify or add new posts in the content/blog, content/projects or other content directories as needed.
+You can modify or add new posts in the content/blogs, content/projects or other content directories as needed.
 
 ### Step 5: Run the project
 Just run zola serve in the root path of the project:
@@ -125,7 +125,7 @@ The difference indicates your role as originator or colaborator.
 Similar to projects, create them under `publications`. Include any papers, speaking engagements, articles, etc.
 
 ### Blog / Posts
-Similar to posts, create them under `blog`. Include any thoughts, musiings, etc.
+Similar to posts, create them under `blogs`. Include any thoughts, musiings, etc.
 **This template does not support a `posts` folder**
 
 ### Template params

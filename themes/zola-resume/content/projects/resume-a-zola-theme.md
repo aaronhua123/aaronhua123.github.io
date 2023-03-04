@@ -65,7 +65,7 @@ cp -r themes/zola-resume/data .
 cp -r themes/zola-resume/content .
 ```
 
-你可以修改或者添加新内容到 `content/blog`, `content/projects` 等目录，注意其中的 `_index.md` 不要删除。
+你可以修改或者添加新内容到 `content/blogs`, `content/projects` 等目录，注意其中的 `_index.md` 不要删除。
 
 ### Step 5: 运行项目
 使用如下命令查看效果:

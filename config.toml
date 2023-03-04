@@ -1,4 +1,5 @@
-base_url = "https://aaronhua123.github.io"
+# base_url = "https://aaronhua123.github.io"
+base_url = "http://127.0.0.1:8000"
 title = "Ahua Blog"
 description = "Ahua Blog"
 theme = "zola-resume"

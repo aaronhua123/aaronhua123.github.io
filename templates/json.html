@@ -1,6 +1,6 @@
 [ 
   {% set start = false %}
-  {% set section = get_section(path="blog/_index.md") %}
+  {% set section = get_section(path="blogs/_index.md") %}
   {%- for post in section.pages -%}
     {% if not post.draft %}
       {% set_global start = true %}
