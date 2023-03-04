@@ -10,5 +10,5 @@ title: "About"
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=aaronhua123&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" />
 </a>
 <a href="https://github.com/aaronhua123">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aaronhua123&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aaronhua123&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&hide=HTML,SCSS" />
 </a>
