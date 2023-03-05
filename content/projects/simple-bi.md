@@ -1,24 +1,19 @@
 ---
-title: "NotFeed: A RSS Reader on GitHub"
-date: 2021-08-28T11:40:32.885Z
+title: "A Simple BI on GitHub"
+date: 2023-03-05 14:20:14
 extra:
   featured: true
-  link: https://notcraft.alongwy.top/NotFeed/
+  link: https://github.com/aaronhua123/SimpleBi
   image: /media/notcraft.png
-description: An RSS reader running entirely from your GitHub
-  repo.  <ul>   <li>Free hosting on GitHub Pages. No ads. No third party
-  tracking. </li>   <li>No need for backend. Content updates via GitHub
-  Actions.</li>   <li>Customizable layouts and styles via templating and theming
-  API. Just bring your HTML and CSS. </li>   <li>Free and open source. No
-  third-party tracking.</li> </ul>
+description: An New way to build a web to show Graph.  <ul>   <li>edit in what you view. </li>   <li>backend and frontend all open in github.</li>   <li>use python and javascript you can edit any time. </li>   </ul>
 taxonomies:
   tags:
-    - RSS
-    - Rust
+    - Python
+    - Javascript
 ---
 ### [NotCraft::NotFeed](https://notcraft.alongwy.top/NotFeed/)
 
-An RSS reader running entirely from your GitHub repo.
+A Simple BI on people.
 
 * Free hosting on [GitHub Pages](https://pages.github.com/). No ads. No third party tracking.
 * No need for backend. Content updates via [GitHub Actions](https://github.com/features/actions).
