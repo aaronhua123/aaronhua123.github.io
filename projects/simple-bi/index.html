@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>Ahua Blog</title>
+  
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/saira-extra-condensed@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sans@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="https://aaronhua123.github.io/main.css">
+
+  
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+
+<script src="https://aaronhua123.github.io/elasticlunr.min.js" defer></script>
+
+<script src="https://aaronhua123.github.io/search_index.en.js" defer></script>
+
+
+
+
+  
+  
+<!-- RSS -->
+
+<link rel="alternate" type="application/atom+xml" title="RSS" href="https://aaronhua123.github.io/atom.xml">
+
+
+  
+
+  
+  
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    
+
+<div style="display:block;margin:auto auto 0;padding:.5rem">
+    <figure class="image">
+        <img id="avatar" class="is-rounded" src="https://aaronhua123.github.io/media/avatar.png">
+    </figure>
+</div>
+
+
+    
+<ul id="menu" class="menu-list">
+    
+
+<li data-menuanchor="about"><a href="https://aaronhua123.github.io/#anchor_about">ABOUT</a></li>   
+
+ 
+<li data-menuanchor="skills"><a href="https://aaronhua123.github.io/#anchor_skills">SKILLS</a></li>
+
+
+<li data-menuanchor="projects"><a href="https://aaronhua123.github.io/#anchor_projects">PROJECTS</a></li>
+
+
+
+
+
+ 
+<li data-menuanchor="blogs"><a href="https://aaronhua123.github.io/#anchor_blog">BLOG</a></li>    
+
+</ul>
+
+  </aside>
+  
+<div class="modal" id="copyTarget">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+      <textarea class="textarea" id="bibtex-content" placeholder="e.g. Hello world"  readonly></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="copyButton">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
+  <div id="content">
+    <!-- Content -->
+    
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <h2>A Simple BI on GitHub<a href="https:&#x2F;&#x2F;github.com&#x2F;aaronhua123&#x2F;SimpleBi" style="font-style: initial;" ><span class="tag is-warning">Link</span></a></h2>
+    
+    <div class="content pb-5">
+      <h3 id="notcraft-notfeed"><a href="https://notcraft.alongwy.top/NotFeed/">NotCraft::NotFeed</a></h3>
+<p>A Simple BI on people.</p>
+<ul>
+<li>Free hosting on <a href="https://pages.github.com/">GitHub Pages</a>. No ads. No third party tracking.</li>
+<li>No need for backend. Content updates via <a href="https://github.com/features/actions">GitHub Actions</a>.</li>
+<li>Customizable layouts and styles via templating and theming API. Just bring your HTML and CSS.</li>
+<li>Free and open source. No third-party tracking.</li>
+</ul>
+<h3 id="how-to-use-it">How to use it?</h3>
+<h4 id="github-pages">Github Pages</h4>
+<ol>
+<li>
+<p>Use the <a href="https://github.com/NotCraft/NotFeed-Template">NotFeed-Template</a> generate your own repository.</p>
+</li>
+<li>
+<p>In the repository root, open <code>Config.toml</code> file, click the &quot;Pencil (Edit this file)&quot; button to edit.</p>
+</li>
+<li>
+<p>Remove <code>#</code> to uncommend the <code>cacheUrl</code> property, replace <code>&lt;github_username&gt;</code> with your GitHub username, and
+replace <code>&lt;repo&gt;</code> with your GitHub repo name.</p>
+</li>
+<li>
+<p>In the sources, update the items to the sources you want to follow. The final content of the file should look similar
+to this:</p>
+<pre data-lang="toml" style="background-color:#fafafa;color:#383a42;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#a0a1a7;"># Config.toml
+</span><span>
+</span><span style="color:#e45649;">site_title </span><span>= </span><span style="color:#50a14f;">&quot;ArxivDaily&quot;
+</span><span style="color:#e45649;">cache_max_days </span><span>= </span><span style="color:#c18401;">7
+</span><span style="color:#e45649;">sources </span><span>= [
+</span><span>  </span><span style="color:#50a14f;">&quot;https://export.arxiv.org/rss/cs.CL&quot;
+</span><span>]
+</span><span style="color:#a0a1a7;"># proxy = &quot;http://127.0.0.1:7890&quot; ## Optional: default is None
+</span><span style="color:#a0a1a7;"># statics_dir   = &quot;statics&quot;       ## Optional: default is &quot;statics&quot;
+</span><span style="color:#a0a1a7;"># templates_dir = &quot;includes&quot;      ## Optional: default is &quot;includes&quot;
+</span><span style="color:#a0a1a7;"># cache_url = &quot;https://GITHUB_USERNAME.github.io/REPO_NAME/cache.json&quot;
+</span><span style="color:#a0a1a7;"># minify = true
+</span><span style="color:#a0a1a7;"># [scripts]
+</span><span style="color:#a0a1a7;"># highlight = &quot;scripts/highlight.rhai&quot;
+</span></code></pre>
+</li>
+<li>
+<p>Scroll to the bottom of the page, click &quot;Commit changes&quot; button.</p>
+</li>
+<li>
+<p>Once the rebuild finishes, your feed will be available at <code>https://&lt;github_username&gt;.github.io/&lt;repo&gt;</code></p>
+</li>
+</ol>
+<h4 id="localhost">Localhost</h4>
+<ol>
+<li>
+<p>Clone the <a href="https://github.com/NotCraft/NotFeed-Template">NotFeed-Template</a> repository.</p>
+</li>
+<li>
+<p>Edit <code>Config.toml</code> file.</p>
+</li>
+<li>
+<p>Run <code>notfeed</code></p>
+<ul>
+<li>build: <code>notfeed build</code></li>
+<li>serve: <code>notfeed serve --addr 127.0.0.1 --port 8080</code> or simply <code>notfeed serve</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="thanks">Thanks</h4>
+<ul>
+<li>Inspired by <a href="https://github.com/osmoscraft/osmosfeed">osmos::feed</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+  
+<script>
+  function show_bib(bib_path) {
+    $.ajax({
+      url: bib_path,
+      success: function (data) {
+        $("#bibtex-content").text(data);
+        $("#copyTarget").addClass("is-active");
+      },
+    });
+  }
+
+  document
+    .getElementById("copyButton")
+    .addEventListener("click", function () {
+      var copyText = document.getElementById("bibtex-content");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      $("#copyTarget").removeClass("is-active");
+    });
+</script>
+
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript">
+    var fullpages = new fullpage('#fullpage', {
+        menu: '#menu',
+        setRecordHistory: false,
+        anchors: [
+             'anchor_about',         
+             'anchor_skills',        
+             'anchor_projects',      
+            
+            
+            
+            
+             'anchor_blog',          
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+
+            }
+            
+	    }
+    });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
+</script>
+
+</body>
+
+</html>

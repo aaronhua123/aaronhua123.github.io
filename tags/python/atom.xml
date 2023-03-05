@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Ahua Blog - Python</title>
+	<subtitle>Ahua Blog</subtitle>
+	<link href="https://aaronhua123.github.io/tags/python/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://aaronhua123.github.io"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2023-03-05T14:20:14+00:00</updated>
+	<id>https://aaronhua123.github.io/tags/python/atom.xml</id>
+	<entry xml:lang="en">
+		<title>A Simple BI on GitHub</title>
+		<published>2023-03-05T14:20:14+00:00</published>
+		<updated>2023-03-05T14:20:14+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/projects/simple-bi/" type="text/html"/>
+		<id>https://aaronhua123.github.io/projects/simple-bi/</id>
+		<content type="html">&lt;h3 id=&quot;notcraft-notfeed&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;notcraft.alongwy.top&#x2F;NotFeed&#x2F;&quot;&gt;NotCraft::NotFeed&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;A Simple BI on people.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free hosting on &lt;a href=&quot;https:&#x2F;&#x2F;pages.github.com&#x2F;&quot;&gt;GitHub Pages&lt;&#x2F;a&gt;. No ads. No third party tracking.&lt;&#x2F;li&gt;
+&lt;li&gt;No need for backend. Content updates via &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;features&#x2F;actions&quot;&gt;GitHub Actions&lt;&#x2F;a&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;Customizable layouts and styles via templating and theming API. Just bring your HTML and CSS.&lt;&#x2F;li&gt;
+&lt;li&gt;Free and open source. No third-party tracking.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;how-to-use-it&quot;&gt;How to use it?&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;github-pages&quot;&gt;Github Pages&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Use the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NotCraft&#x2F;NotFeed-Template&quot;&gt;NotFeed-Template&lt;&#x2F;a&gt; generate your own repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;In the repository root, open &lt;code&gt;Config.toml&lt;&#x2F;code&gt; file, click the &amp;quot;Pencil (Edit this file)&amp;quot; button to edit.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Remove &lt;code&gt;#&lt;&#x2F;code&gt; to uncommend the &lt;code&gt;cacheUrl&lt;&#x2F;code&gt; property, replace &lt;code&gt;&amp;lt;github_username&amp;gt;&lt;&#x2F;code&gt; with your GitHub username, and
+replace &lt;code&gt;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt; with your GitHub repo name.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;In the sources, update the items to the sources you want to follow. The final content of the file should look similar
+to this:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;toml&quot; style=&quot;background-color:#fafafa;color:#383a42;&quot; class=&quot;language-toml &quot;&gt;&lt;code class=&quot;language-toml&quot; data-lang=&quot;toml&quot;&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# Config.toml
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;site_title &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;ArxivDaily&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;cache_max_days &lt;&#x2F;span&gt;&lt;span&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#c18401;&quot;&gt;7
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#e45649;&quot;&gt;sources &lt;&#x2F;span&gt;&lt;span&gt;= [
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#50a14f;&quot;&gt;&amp;quot;https:&#x2F;&#x2F;export.arxiv.org&#x2F;rss&#x2F;cs.CL&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# proxy = &amp;quot;http:&#x2F;&#x2F;127.0.0.1:7890&amp;quot; ## Optional: default is None
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# statics_dir   = &amp;quot;statics&amp;quot;       ## Optional: default is &amp;quot;statics&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# templates_dir = &amp;quot;includes&amp;quot;      ## Optional: default is &amp;quot;includes&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# cache_url = &amp;quot;https:&#x2F;&#x2F;GITHUB_USERNAME.github.io&#x2F;REPO_NAME&#x2F;cache.json&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# minify = true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# [scripts]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a0a1a7;&quot;&gt;# highlight = &amp;quot;scripts&#x2F;highlight.rhai&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Scroll to the bottom of the page, click &amp;quot;Commit changes&amp;quot; button.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the rebuild finishes, your feed will be available at &lt;code&gt;https:&#x2F;&#x2F;&amp;lt;github_username&amp;gt;.github.io&#x2F;&amp;lt;repo&amp;gt;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;localhost&quot;&gt;Localhost&lt;&#x2F;h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Clone the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;NotCraft&#x2F;NotFeed-Template&quot;&gt;NotFeed-Template&lt;&#x2F;a&gt; repository.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Edit &lt;code&gt;Config.toml&lt;&#x2F;code&gt; file.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;notfeed&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;build: &lt;code&gt;notfeed build&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;serve: &lt;code&gt;notfeed serve --addr 127.0.0.1 --port 8080&lt;&#x2F;code&gt; or simply &lt;code&gt;notfeed serve&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h4 id=&quot;thanks&quot;&gt;Thanks&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Inspired by &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;osmoscraft&#x2F;osmosfeed&quot;&gt;osmos::feed&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>N-LTP: A Open-source Neural Chinese Language Technology Platform with Pretrained Models</title>
+		<published>2021-08-28T11:00:37.434+00:00</published>
+		<updated>2021-08-28T11:00:37.434+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/" type="text/html"/>
+		<id>https://aaronhua123.github.io/publications/n-ltp-a-open-source-neural-chinese-language-technology-platform-with-pretrained-models/</id>
+		<content type="html">&lt;p&gt;An open-source neural language technology platform supporting six fundamental Chinese NLP tasks: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;lexical analysis (Chinese word segmentation, part-of-speech tagging, and named entity recognition)&lt;&#x2F;li&gt;
+&lt;li&gt;syntactic parsing (dependency parsing)&lt;&#x2F;li&gt;
+&lt;li&gt;semantic parsing (semantic dependency parsing and semantic role labeling). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Unlike the existing state-of-the-art toolkits, such as Stanza, that adopt an independent model for each task, N-LTP adopts the multi-task framework by using a shared pre-trained model, which has the advantage of capturing the shared knowledge across relevant Chinese tasks. &lt;&#x2F;p&gt;
+&lt;p&gt;In addition, knowledge distillation where the single-task model teaches the multi-task model is further introduced to encourage the multi-task model to surpass its single-task teacher.&lt;&#x2F;p&gt;
+&lt;p&gt;Finally, we provide a collection of easy-to-use APIs and a visualization tool to make users easier to use and view the processing results directly. To the best of our knowledge, this is the first toolkit to support six Chinese NLP fundamental tasks. &lt;&#x2F;p&gt;
+</content>
+	</entry>
+	<entry xml:lang="en">
+		<title>HIT-SCIR at MRP 2020: Transition-based Parser and Iterative Inference Parser</title>
+		<published>2020-09-01T11:00:06.142+00:00</published>
+		<updated>2020-09-01T11:00:06.142+00:00</updated>
+		<link rel="alternate" href="https://aaronhua123.github.io/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/" type="text/html"/>
+		<id>https://aaronhua123.github.io/publications/hit-scir-at-mrp-2020-transition-based-parser-and-iterative-inference-parser/</id>
+		<content type="html">&lt;p&gt;This paper describes our submission system (HIT-SCIR) for the CoNLL 2020 shared task: Cross-Framework and Cross-Lingual Meaning Representation Parsing. &lt;&#x2F;p&gt;
+&lt;p&gt;The task includes five frameworks for graph-based meaning representations, i.e., UCCA, EDS, PTG, AMR, and DRG. &lt;&#x2F;p&gt;
+&lt;p&gt;Our solution consists of two sub-systems: &lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;transition-based parser for Flavor (1) frameworks (UCCA, EDS, PTG)&lt;&#x2F;li&gt;
+&lt;li&gt;iterative inference parser for Flavor (2) frameworks (DRG, AMR). &lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In the final evaluation, our system is ranked 3rd among the seven team both in Cross-Framework Track and Cross-Lingual Track, with the macro-averaged MRP F1 score of 0.81&#x2F;0.69.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
