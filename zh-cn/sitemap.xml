@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://aaronhua123.github.io/zh-cn/categories/</loc>
+    <loc>https://aaronhua123.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://aaronhua123.github.io/categories/"
+                href="https://aaronhua123.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://aaronhua123.github.io/zh-cn/categories/"
+                href="https://aaronhua123.github.io/categories/"
                 />
   </url><url>
-    <loc>http://aaronhua123.github.io/zh-cn/tags/</loc>
+    <loc>https://aaronhua123.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://aaronhua123.github.io/tags/"
+                href="https://aaronhua123.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://aaronhua123.github.io/zh-cn/tags/"
+                href="https://aaronhua123.github.io/tags/"
                 />
   </url><url>
-    <loc>http://aaronhua123.github.io/zh-cn/</loc>
+    <loc>https://aaronhua123.github.io/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://aaronhua123.github.io/"
+                href="https://aaronhua123.github.io/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://aaronhua123.github.io/zh-cn/"
+                href="https://aaronhua123.github.io/"
                 />
   </url>
 </urlset>
