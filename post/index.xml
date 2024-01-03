@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Aaronhua</copyright>
-        <lastBuildDate>Tue, 14 Nov 2023 23:11:23 +0800</lastBuildDate><atom:link href="https://aaronhua123.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://aaronhua123.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hello World</title>
         <link>https://aaronhua123.github.io/p/hello-world/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
@@ -23,6 +23,39 @@
     &gt;Pawel Czerwinski&lt;/a&gt; on &lt;a class=&#34;link&#34; href=&#34;https://unsplash.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Unsplash&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>当一次接口人</title>
+        <link>https://aaronhua123.github.io/p/%E5%BD%93%E4%B8%80%E6%AC%A1%E6%8E%A5%E5%8F%A3%E4%BA%BA/</link>
+        <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://aaronhua123.github.io/p/%E5%BD%93%E4%B8%80%E6%AC%A1%E6%8E%A5%E5%8F%A3%E4%BA%BA/</guid>
+        <description>&lt;h3 id=&#34;小任务升级为紧急任务&#34;&gt;小任务升级为紧急任务&lt;/h3&gt;
+&lt;p&gt;十二月中收到任务，写一个简单的小脚本，完成自动化部署。这脚本的语法是有另外的团队开发维护的。初看是easy job，我跟日常的任务混着一起做。文档很多找不到我想要的内容，支持人员很忙，等到支持支撑完成小脚本，已经一个星期过去了。看看写的内容简简单单百来行，其中很多bug很容易踩到，反馈的错误跟语法错误完全不相关，获取参数的过程也是惊呆我的双眼，居然是去手动部署云服务的页面抓包。很明显还在开发中，只有功能性，没有维护性和反馈的应用。磕磕碰碰，总算写完这个小脚本，准备交货。周一leader跟我说要专心完成这个自动化部署。但是，跟验收人核对后，发现是要开发完成授权，才能给别的租户进行自动化部署。而我发现这个问题已经是周二下午了。我的天，easy job变成开发任务。赶紧拉会找开发帮忙，中间还有一些小插曲，被leader拦截了一天。周四开始开发，leader还找来其他小组已经实现功能的代码，进行助攻。还找开发团队赋能，讲解代码逻辑。讲清楚授权功能的实现（这段是比较绕的）。我还天真的一位完全OK。周五中午拉来了一个小组的开发进来。这个时候又加小组，我的天。。。资料和对接人都只在我这里。新加入的小组，也没有跟我说清楚。周六，安排加班了。另外的一个小组人员安排满满的，前段、后台、阅读已实现小组的代码、验收测试辅助。我还在周六重新讲解安排了工作，直到下午，大家一起核对，进度基本没有，乱成一团。我自己小组的后台开发跟我说，我们两个人能够搞定，但实际是写了一堆代码还没有开始调。我过于信任开发的速度了，周六到下班时间了。唉，只能够打黑工。在这之后，守着我的小组开发，对开发过程的问题给与提示，直到晚上九点多完成接口的调试，才和开发去吃饭了。吃饭后，回来做代码的闭环跟演示，一直搞到12点。真是够了，闭环订单也能搞两个小时。。。明天继续加了。谁叫周一要验收了。安排了两个后台加一个脚本开发的人员完成后续的工作。&lt;/p&gt;
+&lt;p&gt;周一下午验收，上午10点排练才知道要在生产上验收。。。我对这个环节还算有信心。哈哈，在上会前才完成调通。&lt;/p&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;h4 id=&#34;个人犯错的地方&#34;&gt;个人犯错的地方&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;该坚持的地方应该坚持，包括leader介入浪费一天&lt;/li&gt;
+&lt;li&gt;对于人员的能力识别要提前，尽早安排工作&lt;/li&gt;
+&lt;li&gt;对于安排的工作要复核，他清楚自己的工作内容没有&lt;/li&gt;
+&lt;li&gt;尽早的介入（如果周六就直接介入可能就不用打黑工了），不能盲目相信安排的工作能按时完成&lt;/li&gt;
+&lt;li&gt;切记不要半场开香槟，跟验收人核对清楚验收的细节，就不至于验收前才完成生产的调通。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;leader的助攻&#34;&gt;leader的助攻&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;能与验收人直接核对细节&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拉来隔壁小组的代码和开发赋能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;验收排练&lt;/p&gt;
+&lt;p&gt;要是没有这几个关键步骤，真的是无法完成这个突然升级紧急任务的验收&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         <item>
